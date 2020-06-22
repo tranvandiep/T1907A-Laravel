@@ -17,57 +17,28 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/calculator', function () {
-		return view('calculator');
+Route::get('/helloworld', function () {
+		return '<h1>Hello World</h1>';
 	});
 
-Route::get('/calculator_2', [
-		'as'   => 'calculator_name',
-		'uses' => 'CalculatorController@showCalculator'
-	]);
+Route::get('/url', 'UrlController@testUrl');
 
-Route::post('/calculator_2', [
-		'as'   => 'calculator_post_name',
-		'uses' => 'CalculatorController@postCalculator'
-	]);
+Route::get('/input-user', 'UrlController@showInputUser');
 
-Route::get('/student_list', [
-		'as'   => 'student_list',
-		'uses' => 'StudentController@showAllStudent'
-	]);
+Route::get('/url/{href_param}', 'UrlController@testUrl2');
 
-Route::get('/student/edit', [
-		'as'   => 'student_edit',
-		'uses' => 'StudentController@editStudent'
-	]);
+Route::get('/{href_param}.html', function ($href_param) {
+		return $href_param;
+	});
 
-Route::post('/student/delete', [
-		'as'   => 'student_delete',
-		'uses' => 'StudentController@deleteStudent'
-	]);
-Route::post('/student/update', [
-		'as'   => 'student_update',
-		'uses' => 'StudentController@updateStudent'
-	]);
+Route::get('/{param}/{href_param}.html', function ($param, $href_param) {
+		return $param.' >> '.$href_param;
+	});
 
-Route::get('/test', [
-		'as'   => 'test',
-		'uses' => 'TestController@showTest'
-	]);
+Route::get('/{param0}/{param1}/{href_param}.html', function ($param0, $param1, $href_param) {
+		return $param0.' >> '.$param1.' >> '.$href_param;
+	});
 
-Route::get('/ban-hang', [
-		'as'   => 'sell',
-		'uses' => 'TestController@showSell'
-	]);
-
-Route::get('/ban-hang-2', [
-		'as'   => 'sell-2',
-		'uses' => 'TestController@showSell2'
-	]);
-
-Route::get('/ban-hang-3', [
-		'as'   => 'sell-3',
-		'uses' => 'TestController@showSell2'
-	]);
+Route::get('/{param0}/{param1}/{href_param}.{ext}', function ($param0, $param1, $href_param, $ext) {
+		return $param0.' >> '.$param1.' >> '.$href_param.' >> '.$ext;
+	});
