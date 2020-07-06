@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Author' => $baseDir . '/app/Author.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -19,6 +20,8 @@ return array(
     'App\\Http\\Controllers\\Data\\DataController' => $baseDir . '/app/Http/Controllers/Data/DataController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\Layout\\HomeController' => $baseDir . '/app/Http/Controllers/Layout/HomeController.php',
+    'App\\Http\\Controllers\\Modal\\AuthorController' => $baseDir . '/app/Http/Controllers/Modal/AuthorController.php',
+    'App\\Http\\Controllers\\Modal\\BookController' => $baseDir . '/app/Http/Controllers/Modal/BookController.php',
     'App\\Http\\Controllers\\Route\\RouteStudentController' => $baseDir . '/app/Http/Controllers/Route/RouteStudentController.php',
     'App\\Http\\Controllers\\StudentController' => $baseDir . '/app/Http/Controllers/StudentController.php',
     'App\\Http\\Controllers\\TestController' => $baseDir . '/app/Http/Controllers/TestController.php',
@@ -326,6 +329,7 @@ return array(
     'Faker\\Provider\\es_ES\\Payment' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_ES/Payment.php',
     'Faker\\Provider\\es_ES\\Person' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_ES/Person.php',
     'Faker\\Provider\\es_ES\\PhoneNumber' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_ES/PhoneNumber.php',
+    'Faker\\Provider\\es_ES\\Text' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_ES/Text.php',
     'Faker\\Provider\\es_PE\\Address' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_PE/Address.php',
     'Faker\\Provider\\es_PE\\Company' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_PE/Company.php',
     'Faker\\Provider\\es_PE\\Person' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/es_PE/Person.php',
@@ -442,6 +446,7 @@ return array(
     'Faker\\Provider\\ko_KR\\Internet' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Internet.php',
     'Faker\\Provider\\ko_KR\\Person' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Person.php',
     'Faker\\Provider\\ko_KR\\PhoneNumber' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ko_KR/PhoneNumber.php',
+    'Faker\\Provider\\ko_KR\\Text' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/ko_KR/Text.php',
     'Faker\\Provider\\lt_LT\\Address' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Address.php',
     'Faker\\Provider\\lt_LT\\Company' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Company.php',
     'Faker\\Provider\\lt_LT\\Internet' => $vendorDir . '/fzaninotto/faker/src/Faker/Provider/lt_LT/Internet.php',

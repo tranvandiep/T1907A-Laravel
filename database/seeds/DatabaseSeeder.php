@@ -9,23 +9,24 @@ class DatabaseSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		$timestamp = date('Y-m-d H:i:s');
-		// $this->call(UsersTableSeeder::class);
-		// \DB::table('students')->insert([
-		// 		'fullname'   => 'TRAN VAN A',
-		// 		'age'        => 12,
-		// 		'address'    => 'Nam Dinh',
-		// 		'created_at' => $timestamp,
-		// 		'updated_at' => $timestamp
-		// 	]);
-		for ($i = 0; $i < 50; $i++) {
-			\DB::table('students')->insert([
-					'fullname'   => 'TRAN VAN '.$i,
-					'age'        => 12+$i,
-					'address'    => 'Nam Dinh '.$i,
-					'created_at' => $timestamp,
-					'updated_at' => $timestamp
-				]);
-		}
+		DB::table('author')->insert([
+				'nickname'     => 'A1',
+				'fullname'     => 'TRAN VAN A',
+				'address'      => 'Ha Noi',
+				'email'        => 'a@gmail.com',
+				'phone_number' => '123123',
+				'created_at'   => date('Y-m-d H:i:s'),
+				'updated_at'   => date('Y-m-d H:i:s')
+			]);
+
+		DB::table('author')->insert([
+				'nickname'     => 'A2',
+				'fullname'     => 'TRAN VAN B',
+				'address'      => 'Ha Noi',
+				'email'        => 'b@gmail.com',
+				'phone_number' => '123123',
+				'created_at'   => date('Y-m-d H:i:s'),
+				'updated_at'   => date('Y-m-d H:i:s')
+			]);
 	}
 }
