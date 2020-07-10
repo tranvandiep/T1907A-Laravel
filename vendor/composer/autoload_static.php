@@ -455,6 +455,7 @@ class ComposerStaticInitc7f8b7d79f01abd96cbcea9ab416b849
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'AttendenceSeeder' => __DIR__ . '/../..' . '/database/seeds/AttendenceSeeder.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
         'BeyondCode\\DumpServer\\Dumper' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/Dumper.php',
