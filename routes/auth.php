@@ -4,7 +4,7 @@ Route::group(['prefix' => '/auth'], function () {
 
 		Route::group(['prefix' => '/category'], function () {
 				Route::get('/index', 'Auth\CategoryController@index')->middleware('auth');
-				Route::get('/view', 'Auth\CategoryController@view')->middleware('auth');
+				Route::get('/view', 'Auth\CategoryController@view')->middleware('auth')->middleware('admin');
 			});
 
 		Route::group(['prefix' => '/book'], function () {
